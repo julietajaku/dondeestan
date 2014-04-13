@@ -1,6 +1,7 @@
 body {
   font-family: Georgia, "Times", serif;
-  font-size: 10px;
+  font-size: 18px;
+  text-transform: uppercase;;
   /*background-color: #6599FF; */
 }
 
@@ -35,13 +36,16 @@ footer {
 
 .slideout-menu {
   position: fixed;
+  vertical-align: bottom;
   margin-top:30px;
   top: 0;
-  right: -250px;
-  width: 250px;
+  right: -400px;
+  width: 400px;
   height: 100%;
-  background: #6599FF; 
-  opacity: .5;
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(101, 153, 255);
+  /* RGBa with 0.5 opacity */
+  background-color: rgba(101, 153, 255, 0.5);
   z-index: 100;
 }
 
@@ -51,9 +55,24 @@ footer {
   right: 10px;
   display: inline-block;
   padding: 6px 9px 5px;
-    background: #222;
-  vertical-align: bottom;
+  vertical-align: top;
+}
+
+.slideout-menu li {
+  margin: 20px;
+}
+
+.slideout-menu label {
+  margin-right: 30px;
+}
+
+.slideout-menu input {
+  width: 30xp;
 }
 .slideout-menu .slideout-menu-toggle:hover {
   color: #fff;
+}
+
+footer {
+  text-transform: none;
 }

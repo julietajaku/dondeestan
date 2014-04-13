@@ -28,18 +28,60 @@
     <div id="content">  
       <img id ="background-img"/>    
       <div class="slideout-menu">
-        <h3>Menu <a href="#" class="slideout-menu-toggle">×</a></h3>
-        <ul>
-          <li>A</li>
-          <li>B</li>
-          <li>C</li>
-        </ul>
-      </div> <!-- slideout-menu-->
-    </div> <!-- content -->
-    <footer>
-      &copy; La Cholita 2014
-    </footer>
-  </div>
+        <a href="#" class="slideout-menu-toggle">×</a>
+        <form action="#" method="post">
+          <ul>
+            <li>
+              <label>familia</label> 
+              <select name="familia">
+                <option value="jakufam">Jakus</option>
+              </select>
+            </li>
+            <li>
+              <label>nombre</label>
+              <input type="text" name="fname"/>
+            </li>
+            <li>
+             <label>apellido</label>
+             <input type="text" name="lname"/>
+           </li>
+           <li>
+             <label>cumpleaños</label>
+             <input type="text" name="dob"/>
+           </li>
+           <li>
+             <label>estado civil</label>
+             <select name="cstatus">
+              <option value="none">menor de edad</option>
+              <option value="single">husmeando</option>
+              <option value="paired">con husun</option>
+              <option value="married">game over</option>
+              <option value="baby">de embarazo!</option>
+            </select>
+          </li>
+          <li>
+           <label>email</label>
+           <input type="text" name="email"/>
+         </li>
+         <li>
+           <label>teléfono</label>
+           <input type="text" name="number"/>
+           <br>
+           <input type="checkbox" name="Whatsapp">whatsapp</input>
+           <br>
+           <input type="checkbox" name="viber">viber</input>
+         </li>
+         <li>
+                <input type="submit" value="Submit">
+</li>
+       </ul>
+     </form> 
+   </div> <!-- slideout-menu-->
+ </div> <!-- content -->
+ <footer>
+  &copy; La Cholita 2014
+</footer>
+</div>
 </body>
 </html>
 
@@ -63,7 +105,7 @@ $(document).ready(function () {
       } else {
         slideoutMenu.animate({
           right: -slideoutMenuWidth
-        }, 250);  
+        }, 400);  
       }
     });
 });
