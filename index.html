@@ -1,0 +1,70 @@
+  <!doctype html>
+
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>d ó n d e  e s t á n?</title>
+    <meta name="description" content="Una familia - siete continentes">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav>
+      <div id="topbarleft">
+        <button class="slideout-menu-toggle">AddP</button>
+        <button>AddTrip</button>
+      </div> <!-- topbarleft -->
+      <div id="topbarright">
+        <label class="topbarlabel">Where are the </label>
+        <select>
+          <option value="jakufam">Jakus</option>
+        </select>
+        <select>
+          <option>today</option>
+        </select>
+        <label class="topbarlabel">?</label>
+      </div> <!-- topbarright -->
+    </nav>
+    <div id="content">  
+      <img id ="background-img"/>    
+      <div class="slideout-menu">
+        <h3>Menu <a href="#" class="slideout-menu-toggle">×</a></h3>
+        <ul>
+          <li>A</li>
+          <li>B</li>
+          <li>C</li>
+        </ul>
+      </div> <!-- slideout-menu-->
+    </div> <!-- content -->
+    <footer>
+      &copy; La Cholita 2014
+    </footer>
+  </div>
+</body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  $('.slideout-menu-toggle').on('click', function(event){
+    event.preventDefault();
+      // create menu variables
+      var slideoutMenu = $('.slideout-menu');
+      var slideoutMenuWidth = $('.slideout-menu').width();
+      
+      // toggle open class
+      slideoutMenu.toggleClass("open");
+      
+      // slide menu
+      if (slideoutMenu.hasClass("open")) {
+        slideoutMenu.animate({
+          right: "0px"
+        }); 
+      } else {
+        slideoutMenu.animate({
+          right: -slideoutMenuWidth
+        }, 250);  
+      }
+    });
+});
+</script>

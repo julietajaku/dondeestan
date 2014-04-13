@@ -1,0 +1,59 @@
+body {
+  font-family: Georgia, "Times", serif;
+  font-size: 10px;
+  /*background-color: #6599FF; */
+}
+
+nav{
+  background-color: #6599FF; 
+  overflow: hidden; 
+}
+
+#content {
+  size: auto;
+}
+
+#background-img {
+  content: url("../images/worldmap.png");
+  width: 100%; 
+  height: 100%;
+}
+
+#topbarleft {
+  float: left; 
+  margin: 5px;
+}
+
+#topbarright {
+  margin: 5px;
+  float: right; 
+}
+
+footer {
+  text-align: center;
+}
+
+.slideout-menu {
+  position: fixed;
+  margin-top:30px;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #6599FF; 
+  opacity: .5;
+  z-index: 100;
+}
+
+.slideout-menu .slideout-menu-toggle {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  display: inline-block;
+  padding: 6px 9px 5px;
+    background: #222;
+  vertical-align: bottom;
+}
+.slideout-menu .slideout-menu-toggle:hover {
+  color: #fff;
+}
